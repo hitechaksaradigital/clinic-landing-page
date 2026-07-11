@@ -31,3 +31,17 @@
 .no-scrollbar::-webkit-scrollbar {
   display: none;
 }
+
+.text-balance {
+  text-wrap: balance;
+}
+
+.hover-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 24px -8px rgba(0, 60, 144, 0.15);
+}
+
+.glass-nav {
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
