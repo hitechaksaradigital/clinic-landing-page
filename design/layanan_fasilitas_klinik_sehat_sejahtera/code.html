@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+
+<html class="scroll-smooth" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Services &amp; Facilities | Klinik Sehat Sejahtera</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind Configuration -->
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "surface-container-highest": "#d8e3fa",
+                    "on-primary": "#ffffff",
+                    "on-secondary": "#ffffff",
+                    "surface-bright": "#f9f9ff",
+                    "secondary-fixed-dim": "#59de9b",
+                    "primary-fixed": "#d9e2ff",
+                    "outline-variant": "#c3c6d5",
+                    "inverse-primary": "#b0c6ff",
+                    "on-primary-container": "#bcceff",
+                    "on-error-container": "#93000a",
+                    "surface-container-low": "#f0f3ff",
+                    "surface-dim": "#cfdaf1",
+                    "tertiary-fixed-dim": "#b8cac9",
+                    "on-tertiary": "#ffffff",
+                    "on-secondary-container": "#007147",
+                    "on-background": "#111c2c",
+                    "on-secondary-fixed-variant": "#005232",
+                    "on-surface-variant": "#434653",
+                    "secondary-container": "#75f8b3",
+                    "on-surface": "#111c2c",
+                    "surface-variant": "#d8e3fa",
+                    "on-tertiary-container": "#c0d2d1",
+                    "surface-container": "#e7eeff",
+                    "primary-container": "#0f52ba",
+                    "background": "#f9f9ff",
+                    "inverse-on-surface": "#ebf1ff",
+                    "error": "#ba1a1a",
+                    "on-primary-fixed-variant": "#00419c",
+                    "on-tertiary-fixed-variant": "#3a4a49",
+                    "inverse-surface": "#263142",
+                    "secondary-fixed": "#78fbb6",
+                    "primary": "#003c90",
+                    "tertiary": "#334343",
+                    "on-tertiary-fixed": "#0e1e1e",
+                    "tertiary-container": "#4a5b5a",
+                    "tertiary-fixed": "#d4e6e5",
+                    "secondary": "#006d43",
+                    "surface-tint": "#1d59c1",
+                    "surface-container-high": "#dee8ff",
+                    "surface-container-lowest": "#ffffff",
+                    "outline": "#737784",
+                    "error-container": "#ffdad6",
+                    "on-error": "#ffffff",
+                    "primary-fixed-dim": "#b0c6ff",
+                    "on-primary-fixed": "#001945",
+                    "surface": "#f9f9ff",
+                    "on-secondary-fixed": "#002111"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "base": "8px",
+                    "container-max": "1200px",
+                    "margin-desktop": "48px",
+                    "margin-mobile": "16px",
+                    "gutter": "24px",
+                    "section-gap": "80px"
+            },
+            "fontFamily": {
+                    "headline-sm": ["Manrope"],
+                    "display-lg-mobile": ["Manrope"],
+                    "caption": ["Inter"],
+                    "label-md": ["Inter"],
+                    "headline-md": ["Manrope"],
+                    "display-lg": ["Manrope"],
+                    "body-lg": ["Inter"],
+                    "body-md": ["Inter"]
+            },
+            "fontSize": {
+                    "headline-sm": ["24px", {"lineHeight": "32px", "fontWeight": "600"}],
+                    "display-lg-mobile": ["32px", {"lineHeight": "40px", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+                    "caption": ["12px", {"lineHeight": "16px", "fontWeight": "400"}],
+                    "label-md": ["14px", {"lineHeight": "20px", "fontWeight": "600"}],
+                    "headline-md": ["32px", {"lineHeight": "40px", "fontWeight": "600"}],
+                    "display-lg": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                    "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                    "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .glass-nav {
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .clinical-shadow {
+            box-shadow: 0 4px 20px -2px rgba(0, 60, 144, 0.05);
+        }
+        .clinical-shadow-hover:hover {
+            box-shadow: 0 12px 30px -4px rgba(0, 60, 144, 0.12);
+        }
+    </style>
+</head>
+<body class="bg-surface text-on-surface font-body-md selection:bg-primary-fixed selection:text-on-primary-fixed">
+<!-- TopNavBar -->
+<header class="docked full-width top-0 sticky z-50 bg-surface/80 backdrop-blur-md shadow-sm h-20 flex items-center">
+<div class="flex justify-between items-center w-full px-margin-desktop max-w-container-max mx-auto h-20">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-3xl" style="font-variation-settings: 'FILL' 1;">medical_services</span>
+<h1 class="font-headline-sm text-headline-sm font-bold text-primary">Klinik Sehat Sejahtera</h1>
+</div>
+<nav class="hidden md:flex items-center gap-8">
+<a class="text-on-surface-variant hover:text-primary transition-colors font-body-md text-body-md" href="#">Home</a>
+<a class="text-primary font-bold border-b-2 border-primary pb-1 font-body-md text-body-md" href="#">Services</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors font-body-md text-body-md" href="#">Team</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors font-body-md text-body-md" href="#">Blog</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors font-body-md text-body-md" href="#">FAQ</a>
+</nav>
+<div class="flex items-center gap-4">
+<button class="hidden lg:block text-primary font-semibold hover:bg-surface-container transition-all px-4 py-2 rounded-full active:scale-95 duration-200">Emergency</button>
+<button class="bg-primary text-on-primary px-6 py-3 rounded-full font-bold hover:opacity-90 transition-all active:scale-95 duration-200 shadow-md">Book Appointment</button>
+</div>
+</div>
+</header>
+<main>
+<!-- Hero Section -->
+<section class="relative py-section-gap overflow-hidden">
+
+<div class="max-w-container-max mx-auto px-margin-desktop text-center">
+<span class="inline-block px-4 py-1.5 rounded-full bg-secondary-container text-on-secondary-container font-label-md text-label-md mb-6">Expert Medical Care</span>
+<h2 class="font-display-lg text-display-lg text-on-background mb-6 max-w-3xl mx-auto">Comprehensive Services for Your Family's Health</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl mx-auto">We combine advanced medical technology with a compassionate human touch to provide the best healthcare experience in the region.</p>
+</div>
+</section>
+<!-- Services Detailed Cards (Bento Style) -->
+<section class="pb-section-gap px-margin-desktop max-w-container-max mx-auto">
+<div class="grid grid-cols-1 md:grid-cols-12 gap-gutter">
+<!-- General Check-ups (Large Card) -->
+<div class="md:col-span-8 bg-surface-container-lowest p-10 rounded-xl clinical-shadow clinical-shadow-hover transition-all flex flex-col md:flex-row gap-8 items-center group">
+<div class="flex-1">
+<div class="w-14 h-14 bg-primary-fixed rounded-2xl flex items-center justify-center mb-6 text-primary group-hover:scale-110 transition-transform duration-300">
+<span class="material-symbols-outlined text-3xl">stethoscope</span>
+</div>
+<h3 class="font-headline-md text-headline-md mb-4 text-on-surface">General Check-ups</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mb-6">Our preventive care includes comprehensive physical exams, diagnostic screenings, and personalized wellness plans tailored to your age and medical history. We focus on early detection to maintain your long-term health.</p>
+<ul class="space-y-3">
+<li class="flex items-center gap-3 font-label-md text-label-md text-primary">
+<span class="material-symbols-outlined text-lg">check_circle</span> Blood Pressure &amp; Vital Monitoring
+                            </li>
+<li class="flex items-center gap-3 font-label-md text-label-md text-primary">
+<span class="material-symbols-outlined text-lg">check_circle</span> Chronic Disease Management
+                            </li>
+</ul>
+</div>
+<div class="w-full md:w-72 h-80 rounded-xl overflow-hidden shadow-inner">
+<img class="w-full h-full object-cover" data-alt="A clean, bright medical consultation room with a modern wooden desk, professional medical equipment, and large windows bringing in soft natural daylight. The atmosphere is calm and professional, using a palette of white, light grays, and deep navy blue accents to reflect clinical excellence." src="https://lh3.googleusercontent.com/aida-public/AB6AXuD3tX_E2JFuAjFjTnKR20cbuYhtHd3xhbaKJL6qMnEGrP6PVMnj0ykQ0JOTFytfu9h1qDFAKYgs85_Z8H2lpqSzitR8u4dHQs1fByD-12aVHDL1yG173AdkHBN-aKe0iR4HFQAUgHmK41OWG37CJedWeCyf99nOIxBxXQM3WfRtCuOD5ydBl_86h6VY-FvsssczJVsgBrOGVa0rhQtOWB_4whbaLm6_EjfbOesRLB_hzl_Kw5E9t42b"/>
+</div>
+</div>
+<!-- Lab (Small Card) -->
+<div class="md:col-span-4 bg-surface-container-lowest p-8 rounded-xl clinical-shadow clinical-shadow-hover transition-all flex flex-col group">
+<div class="w-12 h-12 bg-secondary-fixed rounded-xl flex items-center justify-center mb-6 text-secondary group-hover:rotate-12 transition-transform">
+<span class="material-symbols-outlined text-2xl">biotech</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm mb-3">Clinical Laboratory</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mb-auto">High-precision diagnostic testing with rapid turnaround times. We offer blood panels, urinalysis, and microbiology testing using automated systems.</p>
+<div class="mt-8 pt-6 border-t border-outline-variant flex justify-between items-center">
+<span class="text-secondary font-bold">ISO Certified</span>
+<span class="material-symbols-outlined">arrow_forward</span>
+</div>
+</div>
+<!-- KIA (Kesehatan Ibu & Anak) -->
+<div class="md:col-span-4 bg-surface-container-lowest p-8 rounded-xl clinical-shadow clinical-shadow-hover transition-all flex flex-col group">
+<div class="w-12 h-12 bg-tertiary-fixed rounded-xl flex items-center justify-center mb-6 text-tertiary group-hover:-translate-y-1 transition-transform">
+<span class="material-symbols-outlined text-2xl">family_restroom</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm mb-3">KIA (Maternal &amp; Child)</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mb-6">Dedicated care for expectant mothers and pediatric growth monitoring. Services include prenatal checkups, neonatal care, and child development assessments.</p>
+<div class="flex flex-wrap gap-2">
+<span class="px-3 py-1 rounded-full bg-surface-container text-on-surface-variant text-caption">Immunization</span>
+<span class="px-3 py-1 rounded-full bg-surface-container text-on-surface-variant text-caption">Prenatal Care</span>
+</div>
+</div>
+<!-- Medical Check-Up (MCU) -->
+<div class="md:col-span-8 bg-primary text-on-primary p-10 rounded-xl clinical-shadow relative overflow-hidden group">
+<div class="absolute right-0 bottom-0 opacity-10 group-hover:scale-110 transition-transform duration-700 pointer-events-none">
+<span class="material-symbols-outlined text-[200px]">health_and_safety</span>
+</div>
+<div class="relative z-10">
+<div class="inline-flex items-center gap-2 px-3 py-1 bg-white/20 rounded-full mb-6 text-caption backdrop-blur-md">
+<span class="material-symbols-outlined text-sm">stars</span> Popular Service
+                        </div>
+<h3 class="font-headline-md text-headline-md mb-4">Medical Check-Up (MCU)</h3>
+<div class="grid md:grid-cols-2 gap-8">
+<p class="font-body-md text-body-md text-on-primary-container leading-relaxed">
+                                Our comprehensive MCU packages are designed for individuals and corporate employees. We provide detailed reports and physician consultations to help you understand your health profile better.
+                            </p>
+<div class="bg-white/10 backdrop-blur-sm p-6 rounded-xl border border-white/20">
+<h4 class="font-bold mb-3">Package Highlights:</h4>
+<ul class="space-y-2 text-label-md">
+<li class="flex items-center gap-2"><span class="material-symbols-outlined text-sm">done</span> EKG &amp; Heart Screening</li>
+<li class="flex items-center gap-2"><span class="material-symbols-outlined text-sm">done</span> Full Metabolic Panel</li>
+<li class="flex items-center gap-2"><span class="material-symbols-outlined text-sm">done</span> Lifestyle Risk Assessment</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<!-- Khitan (Small Card) -->
+<div class="md:col-span-12 bg-surface-container-high p-8 rounded-xl clinical-shadow clinical-shadow-hover transition-all flex flex-col md:flex-row items-center justify-between gap-6">
+<div class="flex items-center gap-6">
+<div class="w-16 h-16 bg-surface-container-lowest rounded-full flex items-center justify-center text-primary shadow-sm">
+<span class="material-symbols-outlined text-3xl">content_cut</span>
+</div>
+<div>
+<h3 class="font-headline-sm text-headline-sm">Modern Circumcision (Khitan)</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">Using advanced, painless laser and ring methods for faster recovery and maximum comfort.</p>
+</div>
+</div>
+<button class="bg-surface-container-lowest text-primary px-8 py-3 rounded-full font-bold hover:bg-primary hover:text-on-primary transition-all shadow-sm border border-primary/10">Learn More</button>
+</div>
+</div>
+</section>
+<!-- Facility Gallery -->
+<section class="bg-surface-container-low py-section-gap">
+<div class="max-w-container-max mx-auto px-margin-desktop">
+<div class="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-6">
+<div class="max-w-xl">
+<h2 class="font-headline-md text-headline-md mb-4 text-on-surface">World-Class Facilities</h2>
+<p class="font-body-md text-body-md text-on-surface-variant">Our clinic is designed to promote healing through environment. We maintain the highest standards of hygiene and patient comfort.</p>
+</div>
+<div class="flex gap-4">
+<button class="w-12 h-12 rounded-full border border-outline flex items-center justify-center text-outline hover:border-primary hover:text-primary transition-all">
+<span class="material-symbols-outlined">chevron_left</span>
+</button>
+<button class="w-12 h-12 rounded-full bg-primary flex items-center justify-center text-on-primary hover:opacity-90 transition-all shadow-md">
+<span class="material-symbols-outlined">chevron_right</span>
+</button>
+</div>
+</div>
+<!-- Asymmetric Photo Grid -->
+<div class="grid grid-cols-1 md:grid-cols-4 grid-rows-2 gap-6 h-[800px] md:h-[600px]">
+<div class="md:col-span-2 md:row-span-2 relative group overflow-hidden rounded-2xl shadow-lg">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" data-alt="A spacious, airy medical clinic waiting room with ergonomic light gray seating, soft indirect lighting from a recessed ceiling, and lush indoor plants in ceramic pots. The floors are polished light marble, reflecting the hygienic and premium corporate modern aesthetic of the clinic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCwYSLuKtadlcgpl9DTYa7w5VpK_6BNaG35citUD_qwI0jxMUlsHN-x1ss9rbJ7yfuBnR4CuU2asjKYAxeD8VyAsWY2iBJrSiVNAmv_bIINmuAm8eGglS9-bPI08jAZM6meouW-pUsCrRAt_be-W3SGD01BTM1iF8O2UcjMaYUHpnciPUo-gHTTZLDuvK5UWTfqFFnpmXFQ95ZCOKL9y531XS5SJkLqYgHm6m4Aot3XpliSivlk3Wz6"/>
+<div class="absolute bottom-0 left-0 right-0 p-6 bg-gradient-to-t from-black/60 to-transparent text-white">
+<span class="font-label-md text-label-md opacity-80 uppercase tracking-widest">Main Lobby</span>
+<h4 class="font-headline-sm text-headline-sm">Serene Waiting Area</h4>
+</div>
+</div>
+<div class="md:col-span-2 md:row-span-1 relative group overflow-hidden rounded-2xl shadow-lg">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" data-alt="An ultra-modern medical examination room featuring a high-tech adjustable patient bed, advanced diagnostic monitors, and stainless steel medical cabinets. The lighting is crisp and bright, highlighting the pristine white environment with subtle primary blue accents." src="https://lh3.googleusercontent.com/aida-public/AB6AXuD1V-HizV3tLr927s0QAbSZjvzOmL0rGKwF6R_QfsYR9EVzOzHj9gZUxwFkZbRZDMXipeOwOWaB8TJAZ9vml2ohw0UV8zjoLbQayVhlGzJ7xa5cCrRe5wbR15xrsw8MGV2mlhvoW4IsfNPq7u8qSdVLQV3VdqQc474nIpE7Xh4VsgxFzRxaqfOFUVsn7akQRCaQdf2ZYmbv5G0llLlg9A3LEW88pSsGK7nKBIeR4aPRxKfTfsKMqX0S"/>
+<div class="absolute inset-0 bg-primary/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+<span class="bg-white text-primary px-4 py-2 rounded-full font-bold">View Room</span>
+</div>
+</div>
+<div class="md:col-span-1 md:row-span-1 relative group overflow-hidden rounded-2xl shadow-lg">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" data-alt="Close-up of a state-of-the-art medical microscope and laboratory centrifuge in a clean-room environment. The focus is sharp on the metallic and glass textures, conveying a sense of scientific precision and advanced healthcare technology." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBT0Pb5n72oT2lJE4jMgldZexboFY7C0I62aHoEGlvK2-FS6pRaYJ3EElU0FVVMRDIW6S43_XeSfMjkofXMBGxJ4BbVDCMNRIh6iSmcspEjjWw84tlaxZaJc41FFNRQVWa6M6xa12H4atOTdH600naBfzBO38UmhI58Znp2iyj4FBDyTSUSu2opizGB_5lVrLYX9hWBUIfdZaMluT4kdWqdYWRELElNbv62I8F7xBo8IE-ScGcXSLCS"/>
+</div>
+<div class="md:col-span-1 md:row-span-1 relative group overflow-hidden rounded-2xl shadow-lg">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" data-alt="A sleek pediatric care corner with colorful but tasteful wall art, child-sized furniture, and playful medical examination tools. The lighting is warm and welcoming, designed to make children feel at ease during their visit." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBrdbcHQG9Q94a0MlHM2i5fGm1HYDioXm6PPC9JsYNGUmY6UVVwbRsvHcEb-lwv6LY1RQKPehqXdlgX0Df0FmzE1RpK0gK2EcZr6RoeXO2PwMq_gEOTOam67nEKr8UfTT3vopJDdE5CKsvBm2ZMdhBEzgvS-yti8N-dWP3l-WkUu6MoHWlrHHqCd70jUByz0YJcTr4qwaceyG81hHlSKRAAp8ZcTJ9tTQ-KtInigoRvIhEiYqoxDmFS"/>
+</div>
+</div>
+</div>
+</section>
+<!-- CTA Section -->
+<section class="py-section-gap">
+<div class="max-w-4xl mx-auto px-margin-mobile text-center">
+<div class="bg-surface-container-highest p-12 rounded-3xl border border-primary/10 relative">
+<h2 class="font-headline-md text-headline-md mb-6">Ready to prioritize your health?</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant mb-10">Our specialists are here to provide you with personalized care and guidance. Book your appointment online today.</p>
+<div class="flex flex-col sm:flex-row gap-4 justify-center">
+<button class="bg-primary text-on-primary px-10 py-4 rounded-full font-bold text-lg hover:opacity-90 shadow-xl active:scale-95 transition-all">Schedule Appointment</button>
+<button class="bg-transparent border-2 border-primary text-primary px-10 py-4 rounded-full font-bold text-lg hover:bg-primary/5 active:scale-95 transition-all">View All Doctors</button>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="full-width bg-surface-container-low dark:bg-surface-container-lowest">
+<div class="w-full px-margin-desktop py-section-gap max-w-container-max mx-auto grid grid-cols-1 md:grid-cols-4 gap-gutter">
+<div class="col-span-1">
+<div class="flex items-center gap-2 mb-6">
+<span class="material-symbols-outlined text-primary" style="font-variation-settings: 'FILL' 1;">medical_services</span>
+<h4 class="font-headline-sm text-headline-sm font-bold text-primary">Klinik Sehat Sejahtera</h4>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant">Providing trusted healthcare services with heart and excellence since 2010.</p>
+</div>
+<div>
+<h5 class="font-bold mb-6 text-on-surface">Services</h5>
+<ul class="space-y-4">
+<li><a class="text-on-surface-variant hover:text-secondary transition-colors" href="#">General Medicine</a></li>
+<li><a class="text-on-surface-variant hover:text-secondary transition-colors" href="#">Pediatrics</a></li>
+<li><a class="text-on-surface-variant hover:text-secondary transition-colors" href="#">Laboratory</a></li>
+<li><a class="text-on-surface-variant hover:text-secondary transition-colors" href="#">Emergency Unit</a></li>
+</ul>
+</div>
+<div>
+<h5 class="font-bold mb-6 text-on-surface">Quick Links</h5>
+<ul class="space-y-4">
+<li><a class="text-on-surface-variant hover:text-secondary transition-colors" href="#">About Us</a></li>
+<li><a class="text-on-surface-variant hover:text-secondary transition-colors" href="#">Privacy Policy</a></li>
+<li><a class="text-on-surface-variant hover:text-secondary transition-colors" href="#">Contact Support</a></li>
+<li><a class="text-on-surface-variant hover:text-secondary transition-colors" href="#">Maps Location</a></li>
+</ul>
+</div>
+<div>
+<h5 class="font-bold mb-6 text-on-surface">Connect</h5>
+<div class="flex gap-4 mb-6">
+<a class="w-10 h-10 rounded-full bg-surface-container-highest flex items-center justify-center hover:bg-primary hover:text-white transition-all" href="#">
+<span class="material-symbols-outlined text-xl">share</span>
+</a>
+<a class="w-10 h-10 rounded-full bg-surface-container-highest flex items-center justify-center hover:bg-primary hover:text-white transition-all" href="#">
+<span class="material-symbols-outlined text-xl">mail</span>
+</a>
+</div>
+<p class="font-caption text-caption text-on-surface-variant">
+                    Emergency: <span class="font-bold text-primary">(021) 1234-5678</span>
+</p>
+</div>
+</div>
+<div class="w-full px-margin-desktop py-8 border-t border-outline-variant max-w-container-max mx-auto text-center">
+<p class="font-body-md text-body-md text-on-surface-variant">© 2024 Klinik Sehat Sejahtera. All rights reserved.</p>
+</div>
+</footer>
+<script>
+        // Smooth hover micro-interactions
+        document.querySelectorAll('button, a').forEach(el => {
+            el.addEventListener('mousedown', () => {
+                el.classList.add('scale-95');
+            });
+            el.addEventListener('mouseup', () => {
+                el.classList.remove('scale-95');
+            });
+        });
+
+        // Simple scroll reveal
+        const observerOptions = {
+            threshold: 0.1
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('opacity-100', 'translate-y-0');
+                    entry.target.classList.remove('opacity-0', 'translate-y-10');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('section > div').forEach(el => {
+            el.classList.add('transition-all', 'duration-1000', 'opacity-0', 'translate-y-10');
+            observer.observe(el);
+        });
+    </script>
+</body></html>

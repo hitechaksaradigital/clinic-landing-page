@@ -1,0 +1,17 @@
+# Klinik Sehat Sejahtera - Website Plan
+
+## Target Audience
+Patients looking for reliable healthcare services, mothers (KIA), and people needing medical check-ups.
+
+## Sitemap
+1. **Homepage**: Hero section, About, Key Advantages, Service Overview, Testimonials, Insurance Partners.
+2. **Services & Facilities**: Detailed cards for General Check-ups, KIA, Lab, Khitan, MCU, and a Facility Gallery.
+3. **Our Team**: Doctor profiles with specialties and schedules.
+4. **Booking & Schedule**: Online registration form and real-time doctor availability calendar.
+5. **Health Blog & FAQ**: Educational articles and frequently asked questions.
+
+## Key Features
+- Floating WhatsApp button for fast response.
+- Integrated Google Maps for location.
+- Multi-language support (Indonesian as primary).
+- Mobile-responsive design (Desktop target first).
