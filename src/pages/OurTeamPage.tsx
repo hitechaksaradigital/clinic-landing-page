@@ -1,22 +1,42 @@
 import type { Doctor } from "../types";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
+import { supabase } from "../lib/supabase";
 
 interface TeamPageProps {
   doctors: Doctor[];
 }
 
-export default function OurTeamPage({ doctors }: TeamPageProps) {
+export default function OurTeamPage({ doctors: initialDoctors }: TeamPageProps) {
+  const [doctors, setDoctors] = useState<Doctor[]>(initialDoctors);
+
   useEffect(() => {
-    const handleScroll = () => {
-      const bar = document.getElementById('cta-bar');
-      if (window.scrollY > 300) {
-        bar?.classList.remove('translate-y-[200%]');
-        bar?.classList.add('translate-y-0');
-      } else {
-        bar?.classList.add('translate-y-[200%]');
-        bar?.classList.remove('translate-y-0');
+    const fetchDoctors = async () => {
+      const { data, error } = await supabase.from('doctors').select('*')
+      if (data && !error) {
+        setDoctors(data.map(d => ({
+          ...d,
+          schedule: d.schedule || undefined,
+          specialty: d.specialty || undefined,
+          specialtyIcon: d.specialty_icon || undefined,
+          availableToday: d.available_today || undefined,
+          icon: d.icon || undefined,
+        })));
       }
-    };
+    }
+    fetchDoctors()
+  }, [])
+
+  const handleScroll = () => {
+    const bar = document.getElementById('cta-bar');
+    if (window.scrollY > 300) {
+      bar?.classList.remove('translate-y-[200%]');
+      bar?.classList.add('translate-y-0');
+    } else {
+      bar?.classList.add('translate-y-[200%]');
+      bar?.classList.remove('translate-y-0');
+    }
+  };
+  useEffect(() => {
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
@@ -35,7 +55,7 @@ export default function OurTeamPage({ doctors }: TeamPageProps) {
       </header>
       
       <section className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-gutter">
-        {doctors.map((doctor, index) => (
+        {doctors.map((doctor) => (
           <div key={doctor.name} className="bg-surface-container-lowest rounded-xl border border-primary/10 p-6 flex flex-col transition-all duration-300 hover:-translate-y-2 group">
             <div className="aspect-[4/5] rounded-lg overflow-hidden mb-6 relative">
               <img className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500" 
